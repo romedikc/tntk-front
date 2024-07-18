@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 // ---- Style ---- //
 import "./index.scss";
 import HorizontalCard from "../HorizontalCard";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBooks } from "../../store/bookSlice";
 

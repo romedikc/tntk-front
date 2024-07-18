@@ -2,7 +2,6 @@ import React from "react";
 // ---- Style ---- //
 import "./index.scss";
 // ---- Components ---- //
-import Img1 from "../../assets/img/img-1.jpg";
 import Cards from "../../components/Cards";
 import NewBooks from "../../components/NewBooks";
 import { useSelector } from "react-redux";

@@ -5,7 +5,6 @@ import Cart from "./views/Cart";
 import Auth from "./views/Auth";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Categories from "./components/Categories";
 import MyOrders from "./views/MyOrders";
 
 function App() {

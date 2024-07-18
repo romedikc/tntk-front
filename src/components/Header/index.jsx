@@ -2,7 +2,6 @@ import React from "react";
 // ---- Style ---- //
 import "./index.scss";
 import { Link } from "react-router-dom";
-import Search from "../Search";
 import Nav from "../Nav";
 
 // ---- Components ---- //
