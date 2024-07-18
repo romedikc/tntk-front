@@ -1,0 +1,27 @@
+@import "../../helpers.scss";
+
+.nav {
+  @include d-flex;
+  gap: 25px;
+  &__link {
+    color: $black-color;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}
+
+.profile {
+  position: relative;
+  &__content {
+    position: absolute;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    right: 0;
+    z-index: 999;
+    -webkit-box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.75);
+  }
+}

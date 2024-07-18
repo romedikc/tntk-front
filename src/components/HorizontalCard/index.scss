@@ -1,0 +1,51 @@
+@import "../../helpers.scss";
+
+.horizontal-card {
+  background-color: $white-color;
+  padding: 10px;
+  border-radius: 6px;
+  @include d-flex;
+  gap: 10px;
+  min-width: 360px;
+  &__img {
+    max-width: 130px;
+    margin: 0 auto 5px;
+  }
+  &__content {
+    min-width: 200px;
+  }
+  &__title {
+    font-size: 18px;
+  }
+  &__author {
+    font-size: 14px;
+    color: $grey-color;
+    margin-bottom: 15px;
+  }
+  &__price-block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    font-size: 20px;
+    gap: 10px;
+  }
+  &__old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: $grey-color;
+  }
+  &__add-to-cart {
+    color: $white-color;
+    background-color: $black-color;
+    padding: 5px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: $grey-color;
+      transition: 0.3s;
+    }
+  }
+}

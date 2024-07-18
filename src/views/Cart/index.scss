@@ -1,0 +1,50 @@
+.cart {
+  padding: 50px 0;
+  .container {
+    position: relative;
+  }
+  &__tittle {
+  }
+  &__allPrice {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: rgb(0, 187, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 187, 255, 1) 0%,
+      rgba(46, 214, 162, 1) 100%
+    );
+    padding: 15px 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 22px;
+  }
+  &__orderBtn {
+    position: fixed;
+    bottom: 50px;
+    background: rgb(0, 187, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 187, 255, 1) 0%,
+      rgba(46, 214, 162, 1) 100%
+    );
+    padding: 15px 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 22px;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    cursor: pointer;
+    &:hover {
+      background: rgb(0, 187, 255);
+      background: linear-gradient(
+        270deg,
+        rgba(0, 187, 255, 1) 0%,
+        rgba(46, 214, 162, 1) 100%
+      );
+    }
+  }
+}

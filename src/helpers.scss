@@ -1,0 +1,11 @@
+$white-color: #fff;
+$body-color: #f3f3f3;
+$black-color: #161616;
+$primary-color: #a4600c;
+$grey-color: #999999;
+
+@mixin d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

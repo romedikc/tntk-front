@@ -1,0 +1,64 @@
+@import "../../helpers.scss";
+
+.card {
+  width: 200px;
+  height: 315px;
+  background-color: $white-color;
+  padding: 0 10px 10px;
+  border-radius: 6px;
+  position: relative;
+  &__like {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(0, 187, 255);
+    background: linear-gradient(
+      45deg,
+      rgba(0, 187, 255, 1) 0%,
+      rgba(46, 214, 162, 1) 100%
+    );
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $body-color;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transition: 0.3s;
+      background-color: #ff545473;
+    }
+  }
+  &__img {
+    max-width: 150px;
+    height: 210px;
+    overflow: hidden;
+    margin: 0 auto 5px;
+  }
+  &__title {
+    font-size: 18px;
+  }
+  &__author {
+    font-size: 14px;
+    color: $grey-color;
+    margin-bottom: 5px;
+  }
+  &__price-block {
+    @include d-flex;
+  }
+  &__add-to-cart {
+    color: $white-color;
+    background-color: $black-color;
+    padding: 5px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: $grey-color;
+      transition: 0.3s;
+    }
+  }
+}

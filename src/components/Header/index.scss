@@ -1,0 +1,14 @@
+@import "../../helpers.scss";
+
+.header {
+  padding: 10px 0;
+  border-bottom: 1px dashed $grey-color;
+  .container {
+    @include d-flex;
+  }
+  &__logo {
+    @include d-flex;
+    color: $primary-color;
+    font-size: 30px;
+  }
+}

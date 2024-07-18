@@ -1,0 +1,71 @@
+@import "./helpers.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: $body-color;
+  color: #161616;
+}
+
+.home,
+.myOrders,
+.cart,
+.auth,
+.favorite {
+  min-height: 100vh;
+}
+
+.link {
+  display: block;
+  text-align: right;
+  color: $primary-color;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.title {
+  font-size: 32px;
+  margin-bottom: 5px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 187, 255, 1) 0%,
+    rgba(46, 214, 162, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.subtitle {
+  font-size: 18px;
+  color: $grey-color;
+  max-width: 728px;
+}

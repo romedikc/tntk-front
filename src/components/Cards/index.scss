@@ -1,0 +1,16 @@
+@import "../../helpers.scss";
+
+.cards {
+  padding: 70px 0;
+  @include d-flex;
+  &__content {
+    @include d-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
