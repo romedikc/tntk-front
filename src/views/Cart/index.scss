@@ -21,8 +21,8 @@
     font-size: 22px;
   }
   &__orderBtn {
-    position: fixed;
-    bottom: 50px;
+    position: relative;
+
     background: rgb(0, 187, 255);
     background: linear-gradient(
       90deg,
@@ -34,9 +34,11 @@
     color: #ffffff;
     font-size: 22px;
     z-index: 999;
-    left: 50%;
+    left: 5%;
     transform: translateX(-50%);
     width: 150px;
+  
+
     cursor: pointer;
     &:hover {
       background: rgb(0, 187, 255);

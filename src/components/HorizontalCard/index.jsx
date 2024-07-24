@@ -8,11 +8,11 @@ const HorizontalCard = ({ book }) => {
   return (
     <div className="horizontal-card">
       <div className="horizontal-card__img">
-        <img src={book.imglink} alt="#" />
+        <img src={book.picture} alt="#" />
       </div>
       <div className="horizontal-card__content">
-        <h3 className="horizontal-card__title">{book.title}</h3>
-        <p className="horizontal-card__author">{book.author}</p>
+        <h3 className="horizontal-card__name">{book.name}</h3>
+        <p className="horizontal-card__description">{book.description}</p>
 
         <div className="horizontal-card__price-block">
           <span className="horizontal-card__price">USD {book.price}</span>

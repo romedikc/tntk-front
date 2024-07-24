@@ -9,14 +9,14 @@ const Card = ({ book }) => {
   useEffect(() => {
     const favoriteBooks =
       JSON.parse(localStorage.getItem("favorite-books")) || [];
-    const alreadyLiked = favoriteBooks.some((b) => b.title === book.title);
+    const alreadyLiked = favoriteBooks.some((b) => b.name === book.name);
     setIsLiked(alreadyLiked);
-  }, [book.title]);
+  }, [book.name]);
 
   const likeFunction = () => {
     const favoriteBooks =
       JSON.parse(localStorage.getItem("favorite-books")) || [];
-    const bookIndex = favoriteBooks.findIndex((b) => b.title === book.title);
+    const bookIndex = favoriteBooks.findIndex((b) => b.name === book.name);
 
     if (!isLiked) {
       favoriteBooks.push(book);
@@ -34,7 +34,7 @@ const Card = ({ book }) => {
     const cartBooks = JSON.parse(localStorage.getItem("cart-books")) || [];
     cartBooks.push(book);
     localStorage.setItem("cart-books", JSON.stringify(cartBooks));
-    alert(`Книга "${book.title}" добавлена в корзину!`);
+    alert(`Book "${book.name}" added to the cart!`);
   };
 
   return (
@@ -43,10 +43,10 @@ const Card = ({ book }) => {
         {isLiked ? <MdFavorite /> : <GrFavorite />}
       </span>
       <div className="card__img">
-        <img src={book.imglink} alt="#" />
+        <img src={book.picture} alt="#" />
       </div>
-      <h3 className="card__title">{book.title}</h3>
-      <p className="card__author">{book.author}</p>
+      <h3 className="card__name">{book.name}</h3>
+      <p className="card__description">{book.description}</p>
       <div className="card__price-block">
         <span className="card__price">USD {book.price}</span>
         <button className="card__add-to-cart" onClick={addToCart}>

@@ -19,7 +19,7 @@ const NewBooks = () => {
   return (
     <div className="new-books">
       <div className="container">
-        <h2 className="new-books__title title">New</h2>
+        <h2 className="new-books__name name">New</h2>
         <p className="new-books__subtitle subtitle">
           What's new? Browse the latest titles in the new releases category to
           discover your next thrilling read!

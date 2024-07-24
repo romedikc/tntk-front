@@ -42,13 +42,20 @@ const Cart = () => {
       <div className="container">
         <h2 className="cart__title title">Cart</h2>
         <span className="cart__allPrice">USD {calculateTotalPrice()}</span>
-        <button className="cart__orderBtn" onClick={handleOrderClick}>
-          Order
-        </button>
+
         <p className="cart__subtitle subtitle">
           Your reading journey starts here!
         </p>
         <Cards books={cartBooks} />
+
+        <div style={{  display: 'flex', justifyContent: 'center'}}>
+          <button className="cart__orderBtn" onClick={handleOrderClick}>
+            Order
+          </button>
+
+        </div>
+   
+
       </div>
     </div>
   );

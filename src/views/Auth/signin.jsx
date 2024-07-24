@@ -19,42 +19,56 @@ const Signin = () => {
     if (foundUser) {
       localStorage.setItem("userLoggedin", true);
       navigate("/");
+
     } else {
       setError("Invalid username or password. Please try again."); // Set error message
     }
   };
+  
+  const user = JSON.parse(localStorage.getItem("users"))
+  const userLoggedin = JSON.parse(localStorage.getItem("userLoggedin"))
 
   return (
-    <form className="wrapper" onSubmit={handleSubmit}>
-      <h2 className="title">Login</h2>
-      {error && <p className="auth__error">{error}</p>}
-      <p className="auth__text">Login</p>
-      <label className="auth__label">
-        <input
-          className="auth__input"
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-      </label>
-      <p className="auth__text">Password</p>
-      <label className="auth__label">
-        <input
-          className="auth__input"
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button className="auth__btn" type="submit">
-        Login
-      </button>
-      <Link className="auth__link" to="/auth/registration">
-        Not registered? Create an account
-      </Link>
-    </form>
+    <div>
+      {
+        user?.length > 0 && userLoggedin ?
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', fontSize: 25, marginTop: 40}}>
+            <p> Wellcome {user[0].name}</p>
+          </div> 
+          :
+          <form className="wrapper" onSubmit={handleSubmit}>
+            <h2 className="title">Login</h2>
+            {error && <p className="auth__error">{error}</p>}
+            <p className="auth__text">Login</p>
+            <label className="auth__label">
+              <input
+                className="auth__input"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </label>
+            <p className="auth__text">Password</p>
+            <label className="auth__label">
+              <input
+                className="auth__input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </label>
+            <button className="auth__btn" type="submit">
+              Login
+            </button>
+            <Link className="auth__link" to="/auth/registration">
+              Not registered? Create an account
+            </Link>
+          </form>
+      }
+
+    </div>
   );
 };
 
