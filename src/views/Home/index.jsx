@@ -14,8 +14,8 @@ const Home = () => {
       <div className="section-1">
         <div className="container">
           <h1 className="section-1__title">
-            The best deals and exclusive <br />
-            products for you!
+          The Future of DevOps Starts Here:  <br />
+          TenTek Book Store
           </h1>
         </div>
       </div>

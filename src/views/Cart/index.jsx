@@ -27,7 +27,7 @@ const Cart = () => {
     localStorage.removeItem("cart-books");
     setCartBooks([]);
 
-    alert("Заказ успешно оформлен!");
+    alert("Order has been placeds!");
   };
   const navigate = useNavigate();
   useEffect(() => {
